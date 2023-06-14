@@ -16,7 +16,7 @@ class Produto:
 def cadastrarProduto():
     import mysql.connector
     mybd = mysql.connector.connect(
-        host="127.0.0.1", user="root", password="rootfelipi", database="bancoAtividades"
+        host="127.0.0.1", user="root", password="rootBanco", database="bancoAtividades"
     )
     mycurso = mybd.cursor()
     descricao = input("Descrição do produto: ")
@@ -45,7 +45,7 @@ def cadastrarProduto():
 def excluirProduto():
     import mysql.connector
     mybd = mysql.connector.connect(
-        host="127.0.0.1", user="root", password="rootfelipi", database="bancoAtividades"
+        host="127.0.0.1", user="root", password="rootBanco", database="bancoAtividades"
     )
     mycurso = mybd.cursor()
     sqlConsulta = "SELECT codigo, descricao FROM produtos ORDER BY codigo"
@@ -72,7 +72,7 @@ def excluirProduto():
 def alterarProduto():
     import mysql.connector
     mybd = mysql.connector.connect(
-        host="127.0.0.1", user="root", password="rootfelipi", database="bancoAtividades"
+        host="127.0.0.1", user="root", password="rootBanco", database="bancoAtividades"
     )
     mycurso = mybd.cursor()
     sqlConsulta = "SELECT codigo, descricao FROM produtos ORDER BY codigo"
@@ -106,7 +106,7 @@ def alterarProduto():
 def consultarProduto():
     import mysql.connector
     mybd = mysql.connector.connect(
-        host="127.0.0.1", user="root", password="rootfelipi", database="bancoAtividades"
+        host="127.0.0.1", user="root", password="rootBanco", database="bancoAtividades"
     )
     mycurso = mybd.cursor()
     print("Consultar unico produto ?")
